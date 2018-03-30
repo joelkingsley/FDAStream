@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_action_home"
+            android:title="@string/home_title" />
+        <item
+            android:id="@+id/nav_catalogue"
+            android:icon="@drawable/ic_action_cat"
+            android:title="@string/catalogue_title" />
+        <item
+            android:id="@+id/nav_purchase"
+            android:icon="@drawable/ic_action_buy"
+            android:title="@string/purchase_title" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_action_setting"
+            android:title="@string/settings_title" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_action_account"
+            android:title="@string/account_title" />
+    </group>
+
+    <item android:title="About">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/share_title" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_action_about"
+                android:title="@string/about_title" />
+        </menu>
+    </item>
+
+</menu>

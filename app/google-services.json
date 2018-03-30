@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "856674269334",
+    "firebase_url": "https://fdastream-9c343.firebaseio.com",
+    "project_id": "fdastream-9c343",
+    "storage_bucket": "fdastream-9c343.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856674269334:android:f7dce752bb78adbc",
+        "android_client_info": {
+          "package_name": "com.chennaicoderiders.fdastream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856674269334-3bpc4sfc90a6e18duee4vavmeiuo0k4i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chennaicoderiders.fdastream",
+            "certificate_hash": "483e0b7b881547aea5b52edefcc1928d55a41e18"
+          }
+        },
+        {
+          "client_id": "856674269334-k871v2bnsqvc8c78vsomrnlj6go4a7ul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyFgroeZzSriejZQOK31Lx2qoPnxTvjfY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856674269334-k871v2bnsqvc8c78vsomrnlj6go4a7ul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
