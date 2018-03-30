@@ -53,7 +53,6 @@ public class ExoVideoActivity extends AppCompatActivity {
         public void onCreate(@Nullable Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
-
             initializePlayer();
         }
 
@@ -104,6 +103,16 @@ public class ExoVideoActivity extends AppCompatActivity {
 
             player.setPlayWhenReady(playWhenReady);
             player.seekTo(currentWindow, playbackPosition);
+
+
+            Long id = getActivity().getIntent().getLongExtra("EXTRA_ID",-1);
+            if(id == -1){
+                id = 1L;
+            }
+
+            DBHandler dbHandler = new DBHandler(getActivity());
+            Video video = dbHandler.getVideo(id);
+            videoURL = video.get_url();
 
             Uri uri = Uri.parse(videoURL);
             MediaSource mediaSource = buildMediaSource(uri);

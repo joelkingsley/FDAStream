@@ -34,6 +34,8 @@ public class DescriptionActivity extends AppCompatActivity
     TextView textView;
     TextView videoName;
 
+    Long id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,20 +49,11 @@ public class DescriptionActivity extends AppCompatActivity
                 .build()
         );
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         imageView = findViewById(R.id.imageView);
         textView = findViewById(R.id.textView);
         videoName = findViewById(R.id.videoName);
 
-        Long id = getIntent().getLongExtra("EXTRA_ID",-1);
+        id = getIntent().getLongExtra("EXTRA_ID",-1);
         Log.d("Description:","Video ID " + id);
         DBHandler dbHandler = new DBHandler(this);
         Video video = dbHandler.getVideo(id);
@@ -82,6 +75,14 @@ public class DescriptionActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DescriptionActivity.this,ExoVideoActivity.class);
+                intent.putExtra("EXTRA_ID",id);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
